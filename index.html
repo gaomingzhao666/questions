@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>気になる質問</title>
+
+		<!-- startup style -->
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+		</style>
+
+		<!-- card component style -->
+		<style>
+			.flip-card {
+				background-color: transparent;
+				width: 400px;
+				height: 300px;
+				margin: 10px;
+				perspective: 1000px;
+				color: white;
+			}
+
+			.flip-card-inner {
+				position: relative;
+				width: 100%;
+				height: 100%;
+				transition: transform 800ms;
+				transform-style: preserve-3d;
+			}
+
+			.flip-card:hover .flip-card-inner {
+				transform: rotateY(180deg);
+			}
+
+			.flip-card-front,
+			.flip-card-back {
+				box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+				position: absolute;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				width: 100%;
+				height: 100%;
+				-webkit-backface-visibility: hidden;
+				backface-visibility: hidden;
+				border-radius: 30px;
+			}
+
+			.flip-card-front {
+				box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 2px,
+					rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+					rgba(0, 0, 0, 0.2) 0px -1px 0px inset;
+				background-color: #171717;
+			}
+
+			.flip-card-back {
+				box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 2px,
+					rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+					rgba(0, 0, 0, 0.2) 0px -1px 0px inset;
+				background-color: #171717;
+				transform: rotateY(180deg);
+			}
+		</style>
+
+		<!-- global style -->
+		<style>
+			.container {
+				width: 100%;
+			}
+
+			h1 {
+				text-align: center;
+				margin-top: 30px;
+			}
+
+			h2 {
+				margin-left: 15px;
+			}
+
+			a {
+				color: skyblue;
+			}
+
+			.list {
+				display: flex;
+				/* justify-content: space-around; */
+
+				align-items: center;
+			}
+
+			.card-title {
+				text-align: center;
+				margin: 30px;
+			}
+
+			.card-content {
+				padding: 30px;
+			}
+		</style>
+
+		<!-- responsive style -->
+		<style>
+			@media (max-width: 620px) {
+				.list {
+					flex-wrap: wrap;
+					justify-content: center;
+				}
+				.flip-card {
+					width: 500px;
+				}
+			}
+
+			@media (min-width: 620px) and (max-width: 888px) {
+				.flip-card:hover {
+					transition: all 800ms ease;
+					width: 150%;
+				}
+			}
+
+			@media (min-width: 888px) and (max-width: 1010px) {
+				.flip-card:hover {
+					transition: all 800ms ease;
+					width: 80%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>気になる質問リスト</h1>
+
+			<h2>日本就職について</h2>
+			<div class="list">
+				<div class="flip-card">
+					<div class="flip-card-inner">
+						<div class="flip-card-front">
+							<h3 class="card-title">なんで本国に就職しないか</h3>
+						</div>
+						<div class="flip-card-back">
+							<div class="card-content">
+								<p>
+									中国の会社はほぼ人権がない、例えば一日12時間以上働いてでも給料8時間通りに払うこと、残業費を払いません、直接的に給料を払いません解雇された事も沢山あります、約八割目安の会社以上そうしている、そうゆうことで、日本に就職が欲しいです
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="flip-card">
+					<div class="flip-card-inner">
+						<div class="flip-card-front">
+							<h3 class="card-title">なんで日本選んだ</h3>
+						</div>
+						<div class="flip-card-back">
+							<div class="card-content">
+								<p>日本の文化は中国と似ている、日本社会には入るやすいです</p>
+								<p>
+									子どもの頃は日本のアニメやテレビや接触しました、日本の文化が好きです、そのおかげで去年初めて日本語を勉強し易いだた!!
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="flip-card">
+					<div class="flip-card-inner">
+						<div class="flip-card-front">
+							<h3 class="card-title">日本就職の安定性どれほど</h3>
+						</div>
+						<div class="flip-card-back">
+							<div class="card-content">
+								<p>
+									私は日本の国籍を取るの覚悟で来ていました、もし私の大学専門に関しての仕事を探しましたならば、ずっと仕事をやている欲しいです。
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="flip-card">
+					<div class="flip-card-inner">
+						<div class="flip-card-front">
+							<h3 class="card-title">どのどころに就職と生活したい</h3>
+						</div>
+						<div class="flip-card-back">
+							<div class="card-content">
+								<p>ランキングを基にしで見れば、福岡 >= 大阪 > 札幌 > 横浜</p>
+								<p>
+									最初は求人倍率を探しました、そして生活費とフロントエンドエンジニアの人材不足程度を基にして、このランキングを心の中で考えていました
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<h2>日本語について</h2>
+			<div class="list">
+				<div class="flip-card">
+					<div class="flip-card-inner">
+						<div class="flip-card-front">
+							<h3 class="card-title">日本語どれほど勉強しましたか</h3>
+						</div>
+						<div class="flip-card-back">
+							<div class="card-content">
+								<p>
+									今は日本語能力試験N1を取りました、複雑ないの日常会話や仕事会話やIT作業中の専門用語は使えできると思います
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="flip-card">
+					<div class="flip-card-inner">
+						<div class="flip-card-front">
+							<h3 class="card-title">日本語文字の広さについて</h3>
+						</div>
+						<div class="flip-card-back">
+							<div class="card-content">
+								<p>
+									中国語は全て漢字で表されます、中国人にとって、たとえこの日本語漢字は前から全然見たことありませんが、大々的な意味は分かりです。
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="flip-card">
+					<div class="flip-card-inner">
+						<div class="flip-card-front">
+							<h3 class="card-title">日本生活どれほど適応しましたか</h3>
+						</div>
+						<div class="flip-card-back">
+							<div class="card-content">
+								<p>
+									今は福岡県北九州市の日本語学校に授業を受けています、ここで日本語を半年くらい勉強して、その後仕事を探しますつもりです、半年間日本の生活は少しずつ慣れていました
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="flip-card">
+					<div class="flip-card-inner">
+						<div class="flip-card-front">
+							<h3 class="card-title">業務について日本語</h3>
+						</div>
+						<div class="flip-card-back">
+							<div class="card-content">
+								<p>
+									日本語の文書作成には、AIを使って行います、現在のAI翻訳確率と効率どちらも良いと思います
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<h2>技術能力について</h2>
+			<div class="list">
+				<div class="flip-card">
+					<div class="flip-card-inner">
+						<div class="flip-card-front">
+							<h3 class="card-title">理論的な知識について</h3>
+						</div>
+						<div class="flip-card-back">
+							<div class="card-content">
+								<p>
+									私は情報科学の学位を取りました、四年間ずっと勉強していました、特にデータ構造、コンピュータ構成原理、コンピュータネットワーク、オペレーティングシステム、コンパイラ原理、データベース原理などの理論的な知識を習得していました
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="flip-card">
+					<div class="flip-card-inner">
+						<div class="flip-card-front">
+							<h3 class="card-title">操作的な知識について</h3>
+						</div>
+						<div class="flip-card-back">
+							<div class="card-content">
+								<p>
+									様々なプロジェクトを作りました、この
+									<a href="https://nano-portfolio-ruby.vercel.app/">アドレス</a>
+									をアクセスして、見てご覧ください
+								</p>
+								<p>
+									このアプリはNuxt/Vue with composition API、SSR
+									solution、Tailwind、Vite、MongoDBなどの技術を使って開発されていましたポートフォリオです、この中では私が作りましたプロジェクトがあります
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="flip-card">
+					<div class="flip-card-inner">
+						<div class="flip-card-front">
+							<h3 class="card-title">開発規範について</h3>
+						</div>
+						<div class="flip-card-back">
+							<div class="card-content">
+								<p>操作書をちゃんと読んだ後に、コードを書きます</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
