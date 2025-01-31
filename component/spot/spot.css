@@ -1,0 +1,18 @@
+.rating {
+  display: inline-flex;
+  cursor: pointer;
+}
+.spot {
+  width: 24px;
+  height: 24px;
+  background-color: #e0e0e0;
+  /* Light gray for inactive */
+  border-radius: 50%;
+  /* Make it a circle */
+  margin: 0 5px;
+  display: inline-block;
+}
+.spot.active {
+  background-color: #6200ee;
+  /* Vibrant primary color when active */
+}
