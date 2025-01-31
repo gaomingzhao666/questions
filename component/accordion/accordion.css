@@ -22,26 +22,29 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 :root {
-  --accordion-title-background: lightgray;
   --accordion-body-border-color: transparent;
-  --accordion-expand-rate: 0.25s;
-  --accordion-open-title-background: gray;
-  --accordion-border-radius: 4px;
+  --accordion-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --accordion-expand-rate: 0.3s;
+  --accordion-border-radius: 20px;
   --accordion-fan-accordion-border-style: 1px solid #ddd;
   --accordion-title-text-transform: capitalize;
 }
 accordion-element {
-  width: 95%;
-  margin-top: 0.1em;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0 1rem;
   display: inline-block;
   height: unset;
+  text-align: center;
   border-radius: var(--accordion-border-radius);
   /* closed accordion state */
   /* open accordion state */
 }
 accordion-element > .ploiu-accordion-title {
-  padding: 1rem;
-  background-color: var(--accordion-title-background);
+  padding: 2rem;
+  font-weight: bold;
+  box-shadow: var(--accordion-shadow);
   text-transform: var(--accordion-title-text-transform);
   border-radius: inherit;
 }
@@ -50,7 +53,7 @@ accordion-element > .ploiu-accordion-title:hover {
 }
 accordion-element > .ploiu-accordion-body {
   border: 1px solid var(--accordion-body-border-color);
-  width: 95%;
+  width: 100%;
   transition: height var(--accordion-expand-rate);
   word-wrap: anywhere;
   overflow: hidden;
@@ -66,18 +69,19 @@ accordion-element.open {
   height: max-content;
 }
 accordion-element.open > .ploiu-accordion-title {
-  background-color: var(--accordion-open-title-background);
+  border: 1px solid lightgray;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 accordion-fan {
   display: block;
-  width: 95%;
+  width: 100%;
   padding-top: 1vh;
 }
 accordion-fan > accordion-element {
   margin-top: -1vh;
   border: var(--accordion-fan-accordion-border-style);
+  box-shadow: var(--accordion-shadow);
   border-radius: 0;
   width: 100%;
 }

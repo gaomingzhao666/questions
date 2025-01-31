@@ -70,7 +70,7 @@ if (!customElements.get('accordion-element')) {
         existingTitle.addEventListener('click', () => this.toggle())
         return existingTitle
       } else {
-        const element = document.createElement('div')
+        const element = document.createElement('h3')
         element.classList.add('ploiu-accordion-title')
         element.innerText = this.#title
         element.addEventListener('click', () => this.toggle())
