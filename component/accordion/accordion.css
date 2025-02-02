@@ -51,6 +51,9 @@ accordion-element > .ploiu-accordion-title:hover {
   cursor: pointer;
 }
 accordion-element > .ploiu-accordion-body {
+  margin: 1rem 0;
+  padding: 0 0.5rem;
+  text-align: start;
   border: 1px solid var(--accordion-body-border-color);
   width: 100%;
   transition: height var(--accordion-expand-rate);
